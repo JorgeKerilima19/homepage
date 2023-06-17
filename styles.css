@@ -260,3 +260,58 @@ body {
 .additional-info__languages-item {
   color: var(--secondary-text-color);
 }
+.projects {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+.projects-title {
+  color: var(--secondary-text-color);
+  text-align: center;
+  margin-bottom: 15px;
+}
+.projects-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 4rem;
+}
+.projects-container_project-card {
+  max-width: 12rem;
+  height: clamp(12rem, 16rem, 20rem);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  color: var(--secondary-text-color);
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: var(--text-decoration-color) 0px 5px 15px;
+}
+.project-card_svg {
+  position: relative;
+  width: 90%;
+  transition: transform 0.5s, width 0.7s;
+}
+.project-card-description h3 {
+  color: var(--primary-text-color);
+  text-align: center;
+}
+.project-card-description {
+  position: absolute;
+  bottom: -10rem;
+  padding: 0.5rem;
+  transition: background-color 0.2s, bottom 0.5s;
+}
+.projects-container_project-card:hover .project-card_svg {
+  width: 50%;
+  transform: translate(0, -15%);
+}
+.projects-container_project-card:hover .project-card-description {
+  background-color: var(--text-decoration-color);
+  color: var(--primary-text-color);
+  bottom: 0;
+}
